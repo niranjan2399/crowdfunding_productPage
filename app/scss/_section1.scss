@@ -1,0 +1,44 @@
+.section__1{
+    margin-inline: 1.5rem;
+    border: 1px solid red;
+    background-color: white;
+    border: 1px solid rgb(243, 243, 243);
+    text-align: center;
+    height: 17.75rem;
+    margin-top: -3.375rem;
+    padding-inline: 1.5rem;
+    border-radius: .5rem;
+
+    &::before{
+        content: url('../../images/logo-mastercraft.svg');
+        position: relative;
+        top: -2rem;
+    }
+
+    h1{
+        font-size: 1.125rem;
+        padding-inline: 1.2rem;
+        margin-top: -0.6rem;
+    }
+
+    p{
+        font-size: .875rem;
+        color: $darkgrey;
+        margin-top: 1.5rem;
+        margin-bottom: 1.625rem;
+        line-height: 1.4rem;
+    }
+
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .bookmark{
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 2rem;
+            border: none;
+            background: hsl(0, 0%, 18%) url('../../images/icon-bookmark.svg');
+        }
+    }
+}
