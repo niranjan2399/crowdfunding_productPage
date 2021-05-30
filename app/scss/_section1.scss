@@ -1,44 +1,111 @@
-.section__1{
-    margin-inline: 1.5rem;
-    border: 1px solid red;
-    background-color: white;
-    border: 1px solid rgb(243, 243, 243);
-    text-align: center;
-    height: 17.75rem;
-    margin-top: -3.375rem;
-    padding-inline: 1.5rem;
-    border-radius: .5rem;
+.section__1 {
+  position: relative;
+  margin-inline: 1.5rem;
+  background-color: white;
+  border: 1px solid rgb(243, 243, 243);
+  text-align: center;
+  height: 17.75rem;
+  margin-top: -3.375rem;
+  padding-inline: 1.5rem;
+  border-radius: 0.5rem;
+  z-index: 0;
 
-    &::before{
-        content: url('../../images/logo-mastercraft.svg');
-        position: relative;
-        top: -2rem;
+  @include breakpoint-up(medium) {
+    margin-inline: auto;
+    margin-top: -5.75rem;
+    height: 16.875rem;
+    max-width: 45.75rem;
+    padding-inline: 2.9375rem;
+    border: 2px solid rgb(243, 243, 243);
+  }
+
+  &::before {
+    content: url("../../images/logo-mastercraft.svg");
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -2rem;
+  }
+
+  h1 {
+    font-size: 1.125rem;
+    padding-inline: 1.2rem;
+    margin-top: 3.25rem;
+
+    @include breakpoint-up(medium) {
+      font-size: 1.5rem;
+      margin-top: 3.7rem;
     }
+  }
 
-    h1{
-        font-size: 1.125rem;
-        padding-inline: 1.2rem;
-        margin-top: -0.6rem;
+  p {
+    font-size: 0.875rem;
+    color: $darkgrey;
+    margin-top: 1.25rem;
+    margin-bottom: 1.625rem;
+    line-height: 1.4rem;
+
+    @include breakpoint-up(medium) {
+      font-size: 1rem;
+      margin-top: 1.125rem;
+      margin-bottom: 2.375rem;
     }
+  }
 
-    p{
-        font-size: .875rem;
-        color: $darkgrey;
-        margin-top: 1.5rem;
-        margin-bottom: 1.625rem;
-        line-height: 1.4rem;
-    }
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 0;
 
-    .buttons{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .bookmark{
-            width: 3.5rem;
-            height: 3.5rem;
-            border-radius: 2rem;
-            border: none;
-            background: hsl(0, 0%, 18%) url('../../images/icon-bookmark.svg');
+    .bookmark {
+      position: relative;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 2rem;
+      border: none;
+      cursor: pointer;
+
+      svg {
+        position: absolute;
+        left: 0rem;
+        top: 0;
+      }
+
+      @include breakpoint-up(small) {
+        margin-right: var(--margin_rightbookmark);
+
+        &:hover {
+          circle {
+            fill: hsl(0, 0%, 44%);
+          }
         }
+
+        &::after {
+          content: "";
+          width: var(--width_before);
+          height: 3.5rem;
+          border-radius: 1.75rem;
+          background-color: var(--bg_content_bookmark);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+
+        &::before {
+          content: var(--content_bookmark);
+          position: absolute;
+          font-family: $font;
+          font-size: 1rem;
+          font-weight: 700;
+          width: 10.875rem;
+          color: var(--color_bookmark);
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
     }
+  }
 }

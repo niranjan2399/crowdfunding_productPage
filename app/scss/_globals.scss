@@ -26,13 +26,43 @@ a {
 }
 
 .green {
-    width: 13.375rem;
-    height: 3.5rem;
-    border-radius: 1.75rem;
-    color: white;
-    border: none;
-    font-family: $font;
-    font-size: 1rem;
-    font-weight: 500;
-    background-color: $moderatecyan;
+  width: 13.375rem;
+  height: 3.5rem;
+  border-radius: 1.75rem;
+  color: white;
+  border: none;
+  font-family: $font;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: $moderatecyan;
+
+  &:hover{
+    background-color: $darkcyan;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.animate_ham {
+  animation: hamburger .8s ease-out forwards;
+}
+
+.animate_atags {
+  &_f{
+  animation: reveal 0.8s ease-in-out forwards;
+  }
+  &_b{
+    animation: reveal 0.8s ease-in-out reverse;
+  }
+}
+
+.animate_overlay{
+  &_f{
+  animation: reveal_overlay .8s ease-in-out forwards;
+  }
+  &_b{
+    animation: reveal_overlay .8s ease-in-out backwards;
+  }
 }

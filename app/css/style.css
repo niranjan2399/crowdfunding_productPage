@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+:root {
+  --content_bookmark: 'Bookmark';
+  --color_bookmark: $darkgrey;
+  --bg_content_bookmark: #F4F4F4;
+  --width_before: 10.875rem;
+  --margin_rightbookmark: 7.375rem;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -36,13 +44,125 @@ a:not(:first-child) {
   border: none;
   font-family: "Commissioner", sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   background-color: #3cb4ac;
+}
+
+.green:hover {
+  background-color: #147b74;
+}
+
+button {
+  cursor: pointer;
+}
+
+.animate_ham {
+  -webkit-animation: hamburger .8s ease-out forwards;
+          animation: hamburger .8s ease-out forwards;
+}
+
+.animate_atags_f {
+  -webkit-animation: reveal 0.8s ease-in-out forwards;
+          animation: reveal 0.8s ease-in-out forwards;
+}
+
+.animate_atags_b {
+  animation: reveal 0.8s ease-in-out reverse;
+}
+
+.animate_overlay_f {
+  -webkit-animation: reveal_overlay .8s ease-in-out forwards;
+          animation: reveal_overlay .8s ease-in-out forwards;
+}
+
+.animate_overlay_b {
+  -webkit-animation: reveal_overlay .8s ease-in-out backwards;
+          animation: reveal_overlay .8s ease-in-out backwards;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes reveal_overlay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes reveal_overlay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hamburger {
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes hamburger {
+  50% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 header {
   position: absolute;
   width: 100%;
+  max-width: 90rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+header .overlay {
+  visibility: hidden;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.658)), to(transparent));
+  background: linear-gradient(rgba(0, 0, 0, 0.658), transparent);
 }
 
 header nav {
@@ -56,6 +176,7 @@ header nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 2rem 1.5rem;
+  position: relative;
 }
 
 @media (min-width: 64em) {
@@ -67,6 +188,7 @@ header nav {
 header nav .logo {
   width: 8.125rem;
   height: 1.375rem;
+  cursor: pointer;
 }
 
 header nav .hamburger {
@@ -82,7 +204,28 @@ header nav .hamburger {
 
 @media (max-width: 63.9375em) {
   header nav .a__tags {
-    display: none;
+    visibility: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 3.5rem;
+    z-index: 1;
+    background-color: white;
+    border-radius: 0.5rem;
+  }
+  header nav .a__tags a {
+    color: black;
+    margin: 0;
+    padding: 1.58rem 1.5rem;
+  }
+  header nav .a__tags a:not(:last-child) {
+    border-bottom: 1px solid #ededed;
   }
 }
 
@@ -102,35 +245,65 @@ header nav .hamburger {
 }
 
 .section__1 {
+  position: relative;
   margin-inline: 1.5rem;
-  border: 1px solid red;
   background-color: white;
   border: 1px solid #f3f3f3;
   text-align: center;
   height: 17.75rem;
   margin-top: -3.375rem;
   padding-inline: 1.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
+  z-index: 0;
+}
+
+@media (min-width: 64em) {
+  .section__1 {
+    margin-inline: auto;
+    margin-top: -5.75rem;
+    height: 16.875rem;
+    max-width: 45.75rem;
+    padding-inline: 2.9375rem;
+    border: 2px solid #f3f3f3;
+  }
 }
 
 .section__1::before {
   content: url("../../images/logo-mastercraft.svg");
-  position: relative;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   top: -2rem;
 }
 
 .section__1 h1 {
   font-size: 1.125rem;
   padding-inline: 1.2rem;
-  margin-top: -0.6rem;
+  margin-top: 3.25rem;
+}
+
+@media (min-width: 64em) {
+  .section__1 h1 {
+    font-size: 1.5rem;
+    margin-top: 3.7rem;
+  }
 }
 
 .section__1 p {
-  font-size: .875rem;
+  font-size: 0.875rem;
   color: #7a7a7a;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
   margin-bottom: 1.625rem;
   line-height: 1.4rem;
+}
+
+@media (min-width: 64em) {
+  .section__1 p {
+    font-size: 1rem;
+    margin-top: 1.125rem;
+    margin-bottom: 2.375rem;
+  }
 }
 
 .section__1 .buttons {
@@ -143,13 +316,54 @@ header nav .hamburger {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  z-index: 0;
 }
 
 .section__1 .buttons .bookmark {
+  position: relative;
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 2rem;
   border: none;
-  background: #2e2e2e url("../../images/icon-bookmark.svg");
+  cursor: pointer;
+}
+
+.section__1 .buttons .bookmark svg {
+  position: absolute;
+  left: 0rem;
+  top: 0;
+}
+
+@media (min-width: 40em) {
+  .section__1 .buttons .bookmark {
+    margin-right: var(--margin_rightbookmark);
+  }
+  .section__1 .buttons .bookmark:hover circle {
+    fill: #707070;
+  }
+  .section__1 .buttons .bookmark::after {
+    content: "";
+    width: var(--width_before);
+    height: 3.5rem;
+    border-radius: 1.75rem;
+    background-color: var(--bg_content_bookmark);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .section__1 .buttons .bookmark::before {
+    content: var(--content_bookmark);
+    position: absolute;
+    font-family: "Commissioner", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 10.875rem;
+    color: var(--color_bookmark);
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 /*# sourceMappingURL=style.css.map */

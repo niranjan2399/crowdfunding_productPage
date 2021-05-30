@@ -6,3 +6,12 @@ $darkcyan: hsl(176, 72%, 28%);
 $black: hsl(0, 0%, 0%);
 $darkgrey: hsl(0, 0%, 48%);
 $font: 'Commissioner', sans-serif;
+
+
+:root{
+--content_bookmark: 'Bookmark';
+--color_bookmark: $darkgrey;
+--bg_content_bookmark: #F4F4F4;
+--width_before: 10.875rem;
+--margin_rightbookmark: 7.375rem;
+}
