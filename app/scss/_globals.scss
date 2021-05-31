@@ -25,6 +25,12 @@ a {
   }
 }
 
+p {
+  font-size: 0.875rem;
+  color: $darkgrey;
+  line-height: 1.4rem;
+}
+
 .green {
   width: 13.375rem;
   height: 3.5rem;
@@ -36,7 +42,7 @@ a {
   font-weight: 700;
   background-color: $moderatecyan;
 
-  &:hover{
+  &:hover {
     background-color: $darkcyan;
   }
 }
@@ -46,23 +52,23 @@ button {
 }
 
 .animate_ham {
-  animation: hamburger .8s ease-out forwards;
+  animation: hamburger 0.8s ease-out forwards;
 }
 
 .animate_atags {
-  &_f{
-  animation: reveal 0.8s ease-in-out forwards;
+  &_f {
+    animation: reveal 0.8s ease-in-out forwards;
   }
-  &_b{
+  &_b {
     animation: reveal 0.8s ease-in-out reverse;
   }
 }
 
-.animate_overlay{
-  &_f{
-  animation: reveal_overlay .8s ease-in-out forwards;
+.animate_overlay {
+  &_f {
+    animation: reveal_overlay 0.8s ease-in-out forwards;
   }
-  &_b{
-    animation: reveal_overlay .8s ease-in-out backwards;
+  &_b {
+    animation: reveal_overlay 0.8s ease-in-out backwards;
   }
 }

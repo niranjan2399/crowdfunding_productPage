@@ -39,11 +39,8 @@
   }
 
   p {
-    font-size: 0.875rem;
-    color: $darkgrey;
     margin-top: 1.25rem;
     margin-bottom: 1.625rem;
-    line-height: 1.4rem;
 
     @include breakpoint-up(medium) {
       font-size: 1rem;
