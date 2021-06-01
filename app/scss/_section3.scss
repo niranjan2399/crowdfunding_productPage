@@ -3,6 +3,8 @@
   border-radius: 0.5rem;
   margin-top: 1.5rem;
   padding-inline: 1.5rem;
+  display: absolute;
+  z-index: 0;
   background: white;
   border: 1px solid rgb(243, 243, 243);
 
@@ -122,7 +124,7 @@
       
     }
     &:last-child {
-      opacity: 0.5;
+      opacity: 0.6;
     }
   }
 

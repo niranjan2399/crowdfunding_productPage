@@ -54,7 +54,6 @@
     margin-top: 1.5rem;
     border-radius: 0.5rem;
     border: 1px solid #dbdbdb;
-    padding-inline: 1.5rem;
     padding-bottom: 1.75rem;
 
     @include breakpoint-up(medium) {
@@ -81,6 +80,7 @@
       position: relative;
       align-items: center;
       margin-top: 2rem;
+      padding-inline: 1.5rem;
 
       input[type="radio"] {
         opacity: 0;
@@ -135,6 +135,7 @@
 
     .overlay__mid {
       margin-bottom: 1.5rem;
+      padding-inline: 1.5rem;
 
       @include breakpoint-up(medium) {
         margin-bottom: 2.125rem;
@@ -160,6 +161,7 @@
     .overlay__bottom {
       display: flex;
       align-items: center;
+      padding-inline: 1.5rem;
 
       @include breakpoint-up(medium) {
         position: absolute;
@@ -185,10 +187,62 @@
 
     .hidden {
       display: none;
+      border-top: 2px solid #dbdbdb;
+      padding-inline: 1.5rem;
+      margin-top: 1.5rem;
+
+      div p{
+        text-align: center;
+        padding-bottom: 1.125rem;
+      }
+
+      .hidden_bottom{
+        display: flex;
+        justify-content: space-between;
+
+        .input{
+          display: flex;
+          align-items: center;
+          width: 6.25rem;
+          height: 3rem;
+          border: 1px solid #dbdbdb;
+          border-radius: 1.5rem;
+          font-size: .875rem;
+          font-weight: 700;
+          color: $darkgrey;
+          padding-inline: 1.5rem;
+
+          input{
+            margin-left: .5625rem;
+            border: none;
+            height: 2rem;
+            width: 3rem;
+            font-size: .875rem;
+            font-weight: 700;
+          }
+        }
+        button{
+          width: 7.25rem;
+          height: 3rem;
+        }
+      }
+
     }
   }
 
   .last {
-    opacity: 0.5;
+    opacity: 0.6;
+  }
+  .overlay2{
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.658);
   }
 }
+

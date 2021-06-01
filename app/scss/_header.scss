@@ -31,7 +31,7 @@ header{
             height: 1.375rem;
             cursor: pointer;
         }
-
+        
         .hamburger{
             width: 1.125rem;
             height: 1.0625rem;
@@ -39,7 +39,7 @@ header{
                 display: none;
             }
         }
-
+        
         .a__tags{
             @include breakpoint-down(small){
                 visibility: hidden;
@@ -56,7 +56,7 @@ header{
                     color: black;
                     margin: 0;
                     padding: 1.58rem 1.5rem;
-
+                    
                     &:not(:last-child){
                         border-bottom: 1px solid hsl(0, 0%, 93%);
                     }

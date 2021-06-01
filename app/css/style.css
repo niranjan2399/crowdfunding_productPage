@@ -107,18 +107,18 @@ button {
 }
 
 ::-webkit-scrollbar {
-  width: 1rem;
+  max-width: 8px;
 }
 
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 0.5rem 0.1rem #7a7a7a;
           box-shadow: inset 0 0 0.5rem 0.1rem #7a7a7a;
-  border-radius: .5rem;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #3cb4ac;
-  border-radius: .5rem;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -537,6 +537,8 @@ header nav .hamburger {
   border-radius: 0.5rem;
   margin-top: 1.5rem;
   padding-inline: 1.5rem;
+  display: absolute;
+  z-index: 0;
   background: white;
   border: 1px solid #f3f3f3;
 }
@@ -685,7 +687,7 @@ header nav .hamburger {
 }
 
 .section__3 .options:last-child {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .section__3 h3 {
@@ -769,7 +771,6 @@ header nav .hamburger {
   margin-top: 1.5rem;
   border-radius: 0.5rem;
   border: 1px solid #dbdbdb;
-  padding-inline: 1.5rem;
   padding-bottom: 1.75rem;
 }
 
@@ -799,6 +800,7 @@ header nav .hamburger {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
+  padding-inline: 1.5rem;
 }
 
 .back__selection .options .overlay__top input[type="radio"] {
@@ -869,6 +871,7 @@ header nav .hamburger {
 
 .back__selection .options .overlay__mid {
   margin-bottom: 1.5rem;
+  padding-inline: 1.5rem;
 }
 
 @media (min-width: 64em) {
@@ -905,6 +908,7 @@ header nav .hamburger {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-inline: 1.5rem;
 }
 
 @media (min-width: 64em) {
@@ -934,9 +938,69 @@ header nav .hamburger {
 
 .back__selection .options .hidden {
   display: none;
+  border-top: 2px solid #dbdbdb;
+  padding-inline: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.back__selection .options .hidden div p {
+  text-align: center;
+  padding-bottom: 1.125rem;
+}
+
+.back__selection .options .hidden .hidden_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.back__selection .options .hidden .hidden_bottom .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 6.25rem;
+  height: 3rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 1.5rem;
+  font-size: .875rem;
+  font-weight: 700;
+  color: #7a7a7a;
+  padding-inline: 1.5rem;
+}
+
+.back__selection .options .hidden .hidden_bottom .input input {
+  margin-left: .5625rem;
+  border: none;
+  height: 2rem;
+  width: 3rem;
+  font-size: .875rem;
+  font-weight: 700;
+}
+
+.back__selection .options .hidden .hidden_bottom button {
+  width: 7.25rem;
+  height: 3rem;
 }
 
 .back__selection .last {
-  opacity: 0.5;
+  opacity: 0.6;
+}
+
+.back__selection .overlay2 {
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.658);
 }
 /*# sourceMappingURL=style.css.map */
