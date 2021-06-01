@@ -1,17 +1,20 @@
 .section__2 {
+  position: relative;
   margin-top: 1.5rem;
   margin-inline: 1.5rem;
   border-radius: 0.5rem;
   background: white;
   text-align: center;
   padding-inline: 1.5rem;
+  z-index: -1;
   border: 1px solid rgb(243, 243, 243);
 
   @include breakpoint-up(medium) {
     max-width: 45.75rem;
     margin-inline: auto;
-    padding-inline: 3.125rem;
-    padding-block: 3rem;
+    padding-inline: 3.0625rem;
+    padding-top: 2.8125rem;
+    padding-bottom: 3rem;
     text-align: left;
 
     .upper_sec {
@@ -75,7 +78,7 @@
     margin-top: 0.625rem;
 
     @include breakpoint-up(medium) {
-      margin-bottom: 2.125rem;
+      margin-bottom: 1.875rem;
     }
   }
 }
