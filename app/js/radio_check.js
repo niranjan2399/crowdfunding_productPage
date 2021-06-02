@@ -12,7 +12,7 @@ function display_option(e) {
       if (opt === label && opt.getAttribute("data-flag") === "false") {
         try {
           const hidden = option.children[3];
-          hidden.style.display = "block";
+          hidden.style.display = "flex";
         } catch (error) {}
         this.style.border = '2px solid hsl(176, 50%, 47%)';
         opt.style.background = "hsl(176, 50%, 47%)";

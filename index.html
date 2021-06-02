@@ -6,49 +6,59 @@
     <!-- displays site properly based on user's device -->
 
     <link
-    rel="icon"
-    type="image/png"
+      rel="icon"
+      type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
-      />
-      <link rel="stylesheet" href="app/css/style.css" />
-      <title>Frontend Mentor | Crowdfunding product page</title>
-    </head>
-    <body>
-      <header>
-        <div class="overlay"></div>
-        <nav>
-          <img class="logo" src="images/logo.svg" alt="" />
-          <img class="hamburger" src="images/icon-hamburger.svg" alt="" />
-          <div class="a__tags">
-            <a href="">About</a>
-            <a href="">Discover</a>
-            <a href="">Get Started</a>
-          </div>
-        </nav>
-      </header>
-      <div class="hero"></div>
-      <div class="section__1">
-        <h1>Mastercraft Bamboo Monitor Riser</h1>
-        <p>
-          A beautiful & handcrafted monitor stand to reduce neck and eye strain.
-        </p>
-        <div class="buttons">
-          <button class="green">Back this project</button>
-          <button class="bookmark" data-flag="false">
-            <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd">
-                <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
-                <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
-              </g>
-            </svg>
-          </button>
+    />
+    <link rel="stylesheet" href="app/css/style.css" />
+    <title>Frontend Mentor | Crowdfunding product page</title>
+  </head>
+  <body>
+    <header>
+      <div class="overlay"></div>
+      <nav>
+        <img class="logo" src="images/logo.svg" alt="" />
+        <img class="hamburger" src="images/icon-hamburger.svg" alt="" />
+        <div class="a__tags">
+          <a href="">About</a>
+          <a href="">Discover</a>
+          <a href="">Get Started</a>
         </div>
-        <div class="back__selection">
-        <div class="overlay2"></div> <!--// 👍-->
+      </nav>
+    </header>
+    <div class="hero"></div>
+    <div class="section__1">
+      <h1>Mastercraft Bamboo Monitor Riser</h1>
+      <p>
+        A beautiful & handcrafted monitor stand to reduce neck and eye strain.
+      </p>
+      <div class="buttons">
+        <button class="green">Back this project</button>
+        <button class="bookmark" data-flag="false">
+          <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+              <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+            </g>
+          </svg>
+        </button>
+      </div>
+      <div class="back__selection">
+        <div class="overlay2"></div>
+        <!--// 👍-->
         <div class="top">
           <h3>Back this project</h3>
-          <div class="img"><svg width="15" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z" fill="#000" fill-rule="evenodd" opacity=".4"/></svg></div>
+          <div class="img">
+            <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z"
+                fill="#000"
+                fill-rule="evenodd"
+                opacity=".4"
+              />
+            </svg>
+          </div>
         </div>
         <p>
           Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
@@ -250,14 +260,30 @@
         </div>
       </div>
     </div>
-    <!-- Success modal start -->
+    <div class="success">
+      <div class="img">
+        <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" fill-rule="evenodd">
+            <circle fill="#3CB3AB" cx="32" cy="32" r="32" />
+            <path
+              stroke="#FFF"
+              stroke-width="5"
+              d="M20 31.86L28.093 40 44 24"
+            />
+          </g>
+        </svg>
+      </div>
+      <div class="p">
+        <h3>Thanks for your support!</h3>
+        <p>
+          Your pledge brings us one step closer to sharing Mastercraft Bamboo
+          Monitor Riser worldwide. You will get an email once our campaign is
+          completed.
+        </p>
+      </div>
+      <div class="button"><button class="green">Got it!</button></div>
+    </div>
 
-    <!-- Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
-  Got it!
-
-  Success modal end -->
     <script src="app/js/nav.js"></script>
     <script src="app/js/buttons.js"></script>
     <script src="app/js/back_selection.js"></script>
