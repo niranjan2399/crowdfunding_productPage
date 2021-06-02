@@ -320,6 +320,7 @@ header nav .hamburger {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: -2rem;
+  z-index: -1;
 }
 
 .section__1 h1 {
@@ -359,7 +360,7 @@ header nav .hamburger {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  z-index: 0;
+  z-index: -1;
 }
 
 .section__1 .buttons .bookmark {
@@ -1065,10 +1066,22 @@ header nav .hamburger {
   top: 8.875rem;
   background-color: white;
   padding-inline: 1.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   margin-inline: 1.5rem;
   border: 1px solid #dbdbdb;
   padding-top: 1.875rem;
+}
+
+@media (min-width: 64em) {
+  .success {
+    top: 30%;
+    width: 33.75rem;
+    padding-inline: 3.0625rem;
+    margin: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 .success .p {
