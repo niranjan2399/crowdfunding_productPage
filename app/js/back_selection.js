@@ -9,6 +9,7 @@ const last_back_option = document.querySelector('.section__3 .options:last-child
 function reveal(){
     // back_select.classList.add('animate_atags_f');
     // overlay_back.classList.add('animate_overlay_f');
+    back_select.scrollIntoView({behavior: 'smooth'});
     header.style.zIndex = '0';
     back_select.style.visibility = 'visible';
     sec_1.style.border = 'none';
